@@ -1,0 +1,11 @@
+baseURL = 'https://doowonee.com/'
+languageCode = 'ko-KR'
+title = 'Doowonee'
+theme = "paper"
+
+[params]
+favicon = "favicon.png"
+appleTouchIcon = "favicon.png"
+
+[permalinks]
+posts = "/:slug/"
