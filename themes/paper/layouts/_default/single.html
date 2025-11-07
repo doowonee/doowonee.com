@@ -113,6 +113,32 @@
     data-lang="{{- site.Params.giscus.lang | default (print `en`) -}}"
     data-loading="{{- site.Params.giscus.loading | default (print `lazy`) -}}" crossorigin="anonymous" async></script>
   {{- end -}}
+
+  <div class="giscus"></div>
+  <script>
+    // localStorage에서 dark/light 값 읽기
+    const themeValue = localStorage.getItem('dark') === 'true' ? 'dark_dimmed' : 'light_protanopia';
+
+    // giscus 스크립트 태그에 data-theme 속성 동적으로 추가
+    const giscusScript = document.createElement('script');
+    giscusScript.src = 'https://giscus.app/client.js';
+    giscusScript.setAttribute('data-repo', 'doowonee/doowonee.com');
+    giscusScript.setAttribute('data-repo-id', 'R_kgDOQRCrxQ');
+    giscusScript.setAttribute('data-category', 'Announcements');
+    giscusScript.setAttribute('data-category-id', 'DIC_kwDOQRCrxc4CxixC');
+    giscusScript.setAttribute('data-mapping', 'pathname');
+    giscusScript.setAttribute('data-strict', '0');
+    giscusScript.setAttribute('data-reactions-enabled', '1');
+    giscusScript.setAttribute('data-emit-metadata', '0');
+    giscusScript.setAttribute('data-input-position', 'top');
+    giscusScript.setAttribute('data-theme', themeValue); // 여기서 동적으로 값 삽입
+    giscusScript.setAttribute('data-lang', 'ko');
+    giscusScript.setAttribute('data-loading', 'lazy');
+    giscusScript.setAttribute('crossorigin', 'anonymous');
+    giscusScript.async = true;
+
+    document.querySelector('.giscus').appendChild(giscusScript);
+  </script>
 </article>
 
 {{- end -}}

@@ -1,4 +1,5 @@
 baseURL = 'https://doowonee.com/'
+defaultContentLanguage = "ko"
 languageCode = 'ko-KR'
 title = 'Doowonee'
 theme = "paper"
