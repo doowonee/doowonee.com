@@ -37,7 +37,7 @@
   {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}<!---->
   {{- if and (gt (len $pages) 1) (in $pages . ) -}}
   <nav
-    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]">
+    class="mt-12 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]">
     {{- with $pages.Next . -}}
     <a class="ltr:pr-3 rtl:pl-3" href="{{- .Permalink -}}"><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>{{- .Name
         -}}</span></a>
@@ -114,7 +114,7 @@
     data-loading="{{- site.Params.giscus.loading | default (print `lazy`) -}}" crossorigin="anonymous" async></script>
   {{- end -}}
 
-  <div class="giscus"></div>
+  <div class="mt-12 giscus"></div>
   <script>
     // localStorage에서 dark/light 값 읽기
     const themeValue = localStorage.getItem('dark') === 'true' ? 'dark_dimmed' : 'light_protanopia';
