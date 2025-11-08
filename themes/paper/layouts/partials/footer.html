@@ -1,20 +1,20 @@
-<footer
-  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
->
+<footer class="mx-auto flex max-w-(--w) items-center px-8 text-xs tracking-wider opacity-60"
+  style="background: transparent; min-height: 4.5rem; padding-bottom: env(safe-area-inset-bottom); padding-bottom: 1rem;">
   <div class="mr-auto">
     {{- if site.Copyright -}} {{- site.Copyright -}} {{- else -}} &copy; {{-
     now.Year }}
     <a class="link" href="{{- `` | absURL -}}">{{- site.Title -}}</a>
     {{- end -}}
+    <p>doowonee.com@gmail.com</p>
   </div>
-  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
-    >powered by hugo️️</a
-  >️
-  <a
-    class="link"
-    href="https://github.com/nanxiaobei/hugo-paper"
-    rel="noopener"
-    target="_blank"
-    >hugo-paper</a
-  >
+  <div>
+    <p>
+      Powered by
+      <a class="link" href="https://gohugo.io/" rel="noopener" target="_blank"> hugo</a>
+    </p>
+    <p>
+      theme
+      <a class="link" href="https://github.com/nanxiaobei/hugo-paper" rel="noopener" target="_blank">hugo-paper</a>
+    </p>
+  </div>
 </footer>
