@@ -525,8 +525,8 @@
     :where(h2):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
       color: var(--tw-prose-headings);
       font-weight: 700;
-      font-size: 1.5em;
-      margin-top: 1em;
+      font-size: 1.3em;
+      margin-top: 1.3em;
       margin-bottom: 0.5em;
       line-height: 1.3333333;
     }
@@ -539,7 +539,7 @@
     :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
       color: var(--tw-prose-headings);
       font-weight: 600;
-      font-size: 1.25em;
+      font-size: 1.2em;
       margin-top: 1.6em;
       margin-bottom: 0.6em;
       line-height: 1.6;
@@ -746,7 +746,7 @@
     --tw-prose-pre-bg: oklch(0.278 0.033 256.848);
     --tw-prose-th-borders: oklch(0.872 0.01 258.338);
     --tw-prose-td-borders: oklch(0.928 0.006 264.531);
-    --tw-prose-strong-bg: oklch(68.148% 0.08 259.944);
+    --tw-prose-strong-bg: oklch(0.77 0.07 260.28);
     --tw-prose-invert-body: oklch(3.038% 0.02105 264.073);
     --tw-prose-invert-headings: #fff;
     --tw-prose-invert-lead: oklch(0.707 0.022 261.325);
