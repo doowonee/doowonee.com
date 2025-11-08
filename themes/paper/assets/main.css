@@ -511,7 +511,7 @@
     :where(h1):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
       color: var(--tw-prose-headings);
       font-weight: 800;
-      font-size: 2em;
+      font-size: 1.7em;
       margin-top: 0;
       margin-bottom: 0.8888889em;
       line-height: 1.1111111;
