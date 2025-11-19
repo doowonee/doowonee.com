@@ -37,14 +37,14 @@
   {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections -}}<!---->
   {{- if and (gt (len $pages) 1) (in $pages . ) -}}
   <nav
-    class="mt-12 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]">
+    class="mt-12 flex-col overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]">
     {{- with $pages.Next . -}}
-    <a class="ltr:pr-3 rtl:pl-3" href="{{- .Permalink -}}"><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span
+    <a class="flex ltr:pr-3 rtl:pl-3" href="{{- .Permalink -}}"><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span
         class="single-nav">{{- .Name
         -}}</span></a>
     {{- end -}}<!---->
     {{- with $pages.Prev . -}}
-    <a class="justify-end pl-3 ltr:ml-auto rtl:mr-auto" href="{{- .Permalink -}}"><span class="single-nav">{{- .Name
+    <a class="flex pl-3 ltr:ml-auto rtl:mr-auto" href="{{- .Permalink -}}"><span class="single-nav">{{- .Name
         -}}</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a>
     {{- end -}}
   </nav>
@@ -139,6 +139,13 @@
     giscusScript.async = true;
 
     document.querySelector('.giscus').appendChild(giscusScript);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+  <script>
+    mediumZoom('article img', {
+      margin: 24,
+      background: '#000',
+    });
   </script>
 </article>
 

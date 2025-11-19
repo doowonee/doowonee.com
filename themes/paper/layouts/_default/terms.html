@@ -2,7 +2,7 @@
 <div class="flex flex-wrap gap-2">
     {{ range .Data.Terms.ByCount }}
     <a href="{{ .Page.RelPermalink }}">
-        #{{ .Term }} <sup>{{ .Count }}</sup>
+        #{{ .Page.Title }} <sup>{{ .Count }}</sup>
     </a>
     {{ end }}
 </div>
