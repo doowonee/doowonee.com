@@ -2277,3 +2277,8 @@ html.dark body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+article h3 {
+  margin-bottom: 0;
+  font-size: var(--text-xl);
+}
